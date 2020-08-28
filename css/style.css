@@ -10,6 +10,18 @@ body {
     background-color: white;
 }
 
+/* Декор элементы */
+.decor-sticky {
+    position: absolute;
+    top: 160px;
+    left: -3px;
+}
+
+/* Модификаторы */
+.section--padding {
+    padding: 150px 0;
+}
+
 /* Компоненты */
 .button {
     cursor: pointer;
@@ -29,6 +41,46 @@ body {
     background-color: #3c7db3;
 }
 
+.button--border {
+    color: var(--accent-color);
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+}
+
+.button--border:hover {
+    border: 2px solid #3c7db3;
+}
+
+.button:hover {
+    text-decoration: none;
+}
+
+.section__title {
+    margin-bottom: 60px;
+    position: relative;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.section__title::before {
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    display: block;
+    width: 55px;
+    height: 2px;
+    content: "";
+    background-color: var(--title-color);
+}
+
+.section__text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
 /* перебиваем контейнер */
 .container {
     max-width: 1240px;
@@ -36,6 +88,7 @@ body {
 
 /* Шапка */
 .header {
+    position: relative;
     padding: 50px 0;
 }
 .menu {
@@ -63,6 +116,7 @@ a.active {
 }
 
 /* Header contant */
+
 .header__title {
     font-style: 48px;
     font-weight: bold;
@@ -72,4 +126,78 @@ a.active {
     color: var(--text-color);
     font-style: 21px;
     line-height: 32px;
+}
+
+.header__picture {
+    margin-top: 80px;
+}
+
+/* Услуги */
+.services {
+    background-image: url("../img/service-bg.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+}
+
+.service__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.service__card {
+    width: 350px;
+    background-color: white;
+    position: relative;
+    z-index: 10;
+    padding: 45px 35px;
+    border-radius: 20px;
+    box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+    margin-bottom: 35px;
+    min-height: 355px;
+}
+
+.service__icon {
+    margin-bottom: 15px;
+}
+
+.service__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 56px;
+    color: var(--title-color);
+}
+
+.service__text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: var(--text-color);
+}
+
+.service-decor {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Advantages */
+.advantages__title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.7;
+    margin-bottom: 45px;
+}
+
+.advantages__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.66;
+    color: var(--text-color);
+    margin-bottom: 35px;
 }
